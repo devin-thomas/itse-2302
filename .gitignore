@@ -1,0 +1,7 @@
+.DS_Store
+*.dmg
+*.docx
+*.pdf
+docx-render/
+submission-screenshots/
+
