@@ -1,0 +1,15 @@
+{
+  "name": "itse-2302-xampp-windows",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Automated Windows evidence capture for the ITSE 2302 XAMPP lab.",
+  "scripts": {
+    "lab:windows": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/run-windows-lab.ps1",
+    "browser:evidence": "node scripts/capture-evidence.mjs",
+    "validate": "node scripts/validate-evidence.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.61.1"
+  }
+}

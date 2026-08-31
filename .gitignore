@@ -4,4 +4,7 @@
 *.pdf
 docx-render/
 submission-screenshots/
+node_modules/
+.runtime/
+output/playwright/
 

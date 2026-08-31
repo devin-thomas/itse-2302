@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Devin Thomas | XAMPP Project</title>
+    <title>Devin Thomas | Windows XAMPP Project</title>
     <style>
         :root {
             color-scheme: light;
@@ -56,7 +56,7 @@
 </head>
 <body>
     <main>
-        <p>XAMPP is working</p>
+        <p>Windows XAMPP is working</p>
         <h1>Devin Thomas</h1>
     </main>
 </body>

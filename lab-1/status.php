@@ -1,5 +1,7 @@
 <?php
-$mysql = @fsockopen('127.0.0.1', 3306, $errorCode, $errorMessage, 1);
+$requestedPort = filter_input(INPUT_GET, 'port', FILTER_VALIDATE_INT);
+$mysqlPort = (is_int($requestedPort) && $requestedPort >= 1 && $requestedPort <= 65535) ? $requestedPort : 3306;
+$mysql = @fsockopen('127.0.0.1', $mysqlPort, $errorCode, $errorMessage, 1);
 $mysqlRunning = is_resource($mysql);
 if ($mysqlRunning) {
     fclose($mysql);
@@ -80,7 +82,7 @@ if ($mysqlRunning) {
             <div class="logo">X</div>
             <div>
                 <h1>XAMPP Live Status</h1>
-                <p>macOS compatibility proof &middot; XAMPP 8.2.4-0</p>
+                <p>Windows compatibility proof &middot; XAMPP 8.2.12-0</p>
             </div>
         </header>
         <div class="service">
@@ -88,10 +90,10 @@ if ($mysqlRunning) {
             <span class="status">RUNNING</span>
         </div>
         <div class="service">
-            <div><strong>MySQL Database</strong><small>127.0.0.1:3306</small></div>
+            <div><strong>MySQL Database</strong><small>127.0.0.1:<?= htmlspecialchars((string) $mysqlPort, ENT_QUOTES, 'UTF-8') ?></small></div>
             <span class="status <?= $mysqlRunning ? '' : 'stopped' ?>"><?= $mysqlRunning ? 'RUNNING' : 'STOPPED' ?></span>
         </div>
-        <footer>Installed at /Applications/XAMPP &middot; Local development only</footer>
+        <footer>Apache on port 80 &middot; Local Windows development only</footer>
     </main>
 </body>
 </html>
