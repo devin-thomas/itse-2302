@@ -5,6 +5,8 @@ Coursework for ITSE 2302, organized by lab.
 ## Labs
 
 - [Lab 1 - XAMPP local server setup](lab-1/README.md)
+- [Lab 2 - HTML, CSS, and PHP page](lab-2/lab2dt.php)
+- [Lab 3 - PHP array](lab-3/lab3dt.php)
 
 The Windows version of Lab 1 is automated. From PowerShell, run:
 
